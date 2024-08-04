@@ -1,7 +1,7 @@
 # contracts
 All hungover contracts such as openapi, asyncapi or data product specifications
 
-## Aim fo Structure
+## Structure
 
 ```
 project
@@ -60,3 +60,4 @@ project
   * [Data Contract CLI](https://cli.datacontract.com/)
   * [Data Contract GPT](https://gpt.datacontract.com/)
 * [Open Data Product Specification](https://opendataproducts.org/)
+* [Design APIs with Swagger and Open API](https://designapis.com/)
