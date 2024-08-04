@@ -1,1 +1,3 @@
-datacontract-cli
+datacontract-cli[all]
+deltalake
+pyspark
