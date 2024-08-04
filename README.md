@@ -1,6 +1,48 @@
 # contracts
 All hungover contracts such as openapi, asyncapi or data product specifications
 
+## Aim fo Structure
+
+```
+project
+│   README.md   
+│
+└───domain01
+│   │   README.md 
+│   │   Requirements
+│   │   DomainModel
+│   └───api
+│       │   domain01.oas.0.1.yml
+│       │   domain01_oas_0_1.html
+│       │   ...
+│   └───events
+│       │   domain01.asyncapi.0.1.yml
+│       │   domain01_asyncapi_0_1.html
+│       │   ...
+│   └───dataproduct
+│       │   domain01.datacontract.0.1.yml
+│       │   domain01.datacontract.0.1.html
+│       │   ...
+│   
+└───domain02
+│   │   README.md 
+│   │   Requirements
+│   │   DomainModel
+│   └───api
+│       │   domain02.oas.0.1.yml
+│       │   domain02_oas_0_1.html
+│       │   ...
+│   └───events
+│       │   domain02.asyncapi.0.1.yml
+│       │   domain02_asyncapi_0_1.html
+│       │   ...
+│   └───dataproduct
+│       │   domain02.datacontract.0.1.yml
+│       │   domain02.datacontract.0.1.html
+│       │   ...
+│  
+```
+
 ## Useful Links
 
 * [Open API](https://www.openapis.org/)
