@@ -1,10 +1,11 @@
 tasks:
-  - name: Install Python Requirements
-    command: |
-      pip install -r requirements.txt
+  - init: pip install -r requirements.txt
 
 vscode:
   extensions:
     - dracula-theme.theme-dracula
     - 42Crunch.vscode-openapi
     - asyncapi.asyncapi-preview
+
+
+
