@@ -1,3 +1,6 @@
 datacontract-cli[all]
 deltalake
 pyspark
+boto3 
+pandas 
+s3fs
