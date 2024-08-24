@@ -1,0 +1,77 @@
+openapi: 3.0.1
+security:
+  - mySecurityRule: []
+info:
+  title: Whiskey API
+  description: |
+    ## Whiskey API
+
+    This is the whiskey API provided by Hungovercoders.
+
+    ![Hungovercoders](https://www.hungovercoders.com/assets/logo3.ico)
+
+    These are the services levels available:
+
+    | Name | Description |
+    | --- | --- |
+    | Basic | Free tier available to all consumers |
+
+  version: "0.0"
+paths:
+  /whiskey/{id}:
+    get:
+      summary: Get a specific whiskey
+      parameters:
+        - name: id
+          in: path
+          description: The ID of the whiskey to retrieve
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Whiskey'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid ID supplied
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Whiskey not found
+
+components:
+  schemas:
+    Whiskey:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        age:
+          type: integer
+        abv:
+          type: number
+          min: 0
+          max: 100
+        distillery:
+          type: string
+        country:
+          type: string
