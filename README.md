@@ -95,7 +95,7 @@ project
 ```yaml
 openapi: 3.0.0
 security:
-  - mySecurityRule: []
+  - mySecurityRule: [ ]
 info:
   title: Sample API
   description: Optional multiline or single-line description in [CommonMark](http://commonmark.org/help/) or HTML.
@@ -105,13 +105,13 @@ servers:
     description: Optional server description, e.g. Main (production) server
   - url: http://staging-api.example.com
     description: Optional server description, e.g. Internal staging server for testing
-paths:
-  /users:
-    get:
+paths: ## Paths Object
+  /users: ## Path Item Object has GET, POST etc
+    get: ## Operation Object has a summary description etc
       summary: Returns a list of users.
       description: Optional extended description in CommonMark or HTML.
-      responses:
-        '200':
+      responses:  ## Responses Object as 200, 404 etc
+        '200': ## Response Object has description, content etc
           description: A JSON array of user names
           content:
             application/json:
@@ -119,4 +119,9 @@ paths:
                 type: array
                 items:
                   type: string
+components:
+  securitySchemes:
+    mySecurityRule:
+      type: http
+      scheme: bearer
 ```

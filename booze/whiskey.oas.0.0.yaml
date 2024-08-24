@@ -1,6 +1,6 @@
 openapi: 3.0.1
 security:
-  - mySecurityRule: []
+  - basicAuth: []
 info:
   title: Whiskey API
   description: |
@@ -17,10 +17,16 @@ info:
     | Basic | Free tier available to all consumers |
 
   version: "0.0"
+tags:
+  - name: whiskey
+    description: Whiskey operations
 paths:
   /whiskey/{id}:
     get:
       summary: Get a specific whiskey
+      operationId: getAWhiskey
+      tags: 
+        - whiskey
       parameters:
         - name: id
           in: path
@@ -59,19 +65,59 @@ paths:
 components:
   schemas:
     Whiskey:
+      title: Whiskey
+      description: A whiskey object
       type: object
       properties:
         id:
-          type: integer
+          type: string
         name:
           type: string
+          minLength: 1
+          maxLength: 50
         age:
           type: integer
+          minimum: 3
+          maximum: 200
         abv:
           type: number
-          min: 0
-          max: 100
+          minimum: 0
+          maximum: 92
         distillery:
           type: string
+          minLength: 1
+          maxLength: 50
+        type: 
+          type: string
+          enum:
+            - Single Malt
+            - Blended
+            - Bourbon
+            - Rye
+            - Corn
+            - Wheat
+            - Other
         country:
           type: string
+          enum:
+            - Scotland
+            - Ireland
+            - USA
+            - Canada
+            - Japan
+            - Wales
+            - England
+            - India
+            - Australia
+            - Other
+      additionalProperties: false
+  securitySchemes:
+    apiKey:
+      description: API Key
+      type: apiKey
+      name: api-key
+      in: header
+    basicAuth:
+      description: Basic Authentication
+      type: http
+      scheme: basic
