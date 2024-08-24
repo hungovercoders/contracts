@@ -48,9 +48,20 @@ project
 
 - [REST Origin - Roy Fielding](https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
 - [Open API](https://www.openapis.org/)
+  - [Open API Lifecycle](https://www.openapis.org/wp-content/uploads/sites/3/2023/05/What-is-OpenAPI-Simple-API-Lifecycle-Vertical.png)
   - [Open API Generator](https://openapi-generator.tech/)
 - [Redoc](https://github.com/Redocly/redoc)
-- [Open API Fundamentals Course](https://github.com/lftraining/LFELL1011-resources/tree/main)
+- [Open API Fundamentals Course](https://training.linuxfoundation.org/express-learning/openapi-fundamentals-lfel1011)
+  - [Open API Fundamentals Course Github](https://github.com/lftraining/LFELL1011-resources/tree/main)
+  - [Semantic Versioning](https://semver.org/)
+  - [Arazzo - Sequence of Calls](https://github.com/OAI/Arazzo-Specification)
+  - [Doc Ops](https://www.writethedocs.org/guide/doc-ops/)
+  - [Zuora Dev Example API Spec](https://developer.zuora.com/v1-api-reference/introduction/)
+  - [Kiota - Generate Client](https://learn.microsoft.com/en-us/openapi/kiota/)
+    - [Kiota Quick Starts](https://learn.microsoft.com/en-us/openapi/kiota/quickstarts/)
+  - [Spectral](https://stoplight.io/open-source/spectral) - Open API linting and governance.
+    - [Spectral Setup Example](https://github.com/lftraining/LFELL1011-resources/blob/main/chapter-5-examples/applying-governance/README.md)
+    - [Spectral Real-World Rulesets](https://docs.stoplight.io/docs/spectral/674b27b261c3c-overview#-real-world-rulesets)
 - [Open API Docusaurus - Best Tool](https://github.com/PaloAltoNetworks/docusaurus-template-openapi-docs)
   - [Open API Docusaurus - Other Examples](https://docusaurus-openapi.netlify.app/)
   - [Docusaurus Resources](https://docusaurus.io/community/resources)
@@ -63,8 +74,7 @@ project
 - [Swagger Hub](https://swagger.io/tools/swaggerhub/)
 - [Prism Mock API](https://docs.stoplight.io/docs/prism/674b27b261c3c-prism-overview)
 - [Specmatic](https://specmatic.io/)
-- [Semantic Versioning](https://semver.org/)
-- [Arazzo - Sequence of Calls](https://github.com/OAI/Arazzo-Specification)
+- [API Blueprint](https://apiblueprint.org/)
 
 - [Async API](https://www.asyncapi.com/en)
 
