@@ -50,8 +50,9 @@ project
 - [Open API](https://www.openapis.org/)
   - [Open API Generator](https://openapi-generator.tech/)
 - [Redoc](https://github.com/Redocly/redoc)
-- [Open API Docusaurus](https://docusaurus-openapi.netlify.app/)
-- 
+- [Open API Docusaurus - Best Tool](https://github.com/PaloAltoNetworks/docusaurus-template-openapi-docs)
+  - [Open API Docusaurus - Other Examples](https://docusaurus-openapi.netlify.app/)
+  - [Docusaurus Resources](https://docusaurus.io/community/resources)
 - [Open API Idea to Implementation](https://www.youtube.com/watch?v=JEBd78U9aBo&t=1728s&pp=ygUIb3BlbiBhcGk%3D)
 - [Swagger VS Code](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi)
 - [Swagger Code Gen](https://swagger.io/tools/swagger-codegen/)

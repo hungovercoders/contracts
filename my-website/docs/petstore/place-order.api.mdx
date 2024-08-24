@@ -1,0 +1,436 @@
+---
+id: place-order
+title: "Place an order for a pet"
+description: ""
+sidebar_label: "Place an order for a pet"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "post api-method"
+info_path: docs/petstore/swagger-petstore-yaml
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Place an order for a pet"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/store/order"}
+>
+  
+</MethodEndpoint>
+
+
+
+
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3><strong
+          className={"openapi-schema__required"}
+        >
+          required
+        </strong>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        <div
+          style={{"marginTop":"1rem","marginBottom":"1rem"}}
+        >
+          
+          
+          order placed for purchasing the pet
+          
+          
+        </div>
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"quantity"}
+          required={false}
+          schemaName={"int32"}
+          qualifierMessage={"**Possible values:** `>= 1`"}
+          schema={{"type":"integer","format":"int32","minimum":1,"default":1}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"shipDate"}
+          required={false}
+          schemaName={"date-time"}
+          qualifierMessage={undefined}
+          schema={{"description":"Estimated ship date","type":"string","format":"date-time"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"status"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={"**Possible values:** [`placed`, `approved`, `delivered`]"}
+          schema={{"type":"string","description":"Order Status","enum":["placed","approved","delivered"]}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"requestId"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"description":"Unique Request Id","type":"string","writeOnly":true}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          successful operation
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"id"}
+                        required={false}
+                        schemaName={"int64"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","format":"int64","readOnly":true,"title":"Id"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"petId"}
+                        required={false}
+                        schemaName={"int64"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","format":"int64","readOnly":true,"title":"Id"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"quantity"}
+                        required={false}
+                        schemaName={"int32"}
+                        qualifierMessage={"**Possible values:** `>= 1`"}
+                        schema={{"type":"integer","format":"int32","minimum":1,"default":1}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"shipDate"}
+                        required={false}
+                        schemaName={"date-time"}
+                        qualifierMessage={undefined}
+                        schema={{"description":"Estimated ship date","type":"string","format":"date-time"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"status"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={"**Possible values:** [`placed`, `approved`, `delivered`]"}
+                        schema={{"type":"string","description":"Order Status","enum":["placed","approved","delivered"]}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"complete"}
+                        required={false}
+                        schemaName={"boolean"}
+                        qualifierMessage={undefined}
+                        schema={{"description":"Indicates whenever order was completed or not","type":"boolean","default":false,"readOnly":true}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"id\": 0,\n  \"petId\": 0,\n  \"quantity\": 1,\n  \"shipDate\": \"2024-07-29T15:51:28.071Z\",\n  \"status\": \"placed\",\n  \"complete\": false\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem><TabItem
+              label={"application/xml"}
+              value={"application/xml"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"id"}
+                        required={false}
+                        schemaName={"int64"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","format":"int64","readOnly":true,"title":"Id"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"petId"}
+                        required={false}
+                        schemaName={"int64"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","format":"int64","readOnly":true,"title":"Id"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"quantity"}
+                        required={false}
+                        schemaName={"int32"}
+                        qualifierMessage={"**Possible values:** `>= 1`"}
+                        schema={{"type":"integer","format":"int32","minimum":1,"default":1}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"shipDate"}
+                        required={false}
+                        schemaName={"date-time"}
+                        qualifierMessage={undefined}
+                        schema={{"description":"Estimated ship date","type":"string","format":"date-time"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"status"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={"**Possible values:** [`placed`, `approved`, `delivered`]"}
+                        schema={{"type":"string","description":"Order Status","enum":["placed","approved","delivered"]}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"complete"}
+                        required={false}
+                        schemaName={"boolean"}
+                        qualifierMessage={undefined}
+                        schema={{"description":"Indicates whenever order was completed or not","type":"boolean","default":false,"readOnly":true}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"<root>\n  <id>0</id>\n  <petId>0</petId>\n  <quantity>1</quantity>\n  <shipDate>2024-07-29T15:51:28.071Z</shipDate>\n  <status>placed</status>\n  <complete>false</complete>\n</root>"}
+                    language={"xml"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"400"}
+        value={"400"}
+      >
+        <div>
+          
+          
+          Invalid Order
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      any
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"status\": 400,\n  \"message\": \"Invalid Order\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem><TabItem
+                  label={"Example"}
+                  value={"Example"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"status\": 400,\n  \"message\": \"Invalid Order\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
