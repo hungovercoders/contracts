@@ -54,7 +54,6 @@ project
 - [Open API Fundamentals Course](https://training.linuxfoundation.org/express-learning/openapi-fundamentals-lfel1011)
   - [Open API Fundamentals Course Github](https://github.com/lftraining/LFELL1011-resources/tree/main)
   - [Semantic Versioning](https://semver.org/)
-  - [Arazzo - Sequence of Calls](https://github.com/OAI/Arazzo-Specification)
   - [Doc Ops](https://www.writethedocs.org/guide/doc-ops/)
   - [Zuora Dev Example API Spec](https://developer.zuora.com/v1-api-reference/introduction/)
   - [Kiota - Generate Client](https://learn.microsoft.com/en-us/openapi/kiota/)
@@ -75,6 +74,8 @@ project
 - [Prism Mock API](https://docs.stoplight.io/docs/prism/674b27b261c3c-prism-overview)
 - [Specmatic](https://specmatic.io/)
 - [API Blueprint](https://apiblueprint.org/)
+
+- [Arazzo - Sequence of API Calls](https://github.com/OAI/Arazzo-Specification)
 
 - [Async API](https://www.asyncapi.com/en)
 
