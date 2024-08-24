@@ -21,7 +21,76 @@ tags:
   - name: whiskey
     description: Whiskey operations
 paths:
-  /whiskey/{id}:
+  /whiskeys:
+    get:
+      summary: Get all whiskeys
+      operationId: getAllWhiskeys
+      tags:
+        - whiskey
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                maxItems: 100
+                items:
+                  $ref: '#/components/schemas/Whiskey'
+        '500':
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Server Error
+    post:
+      summary: Add a new whiskey
+      operationId: addWhiskey
+      tags:
+        - whiskey
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Whiskey'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Whiskey'
+          links:
+            GetWhiskey:
+              operationId: getAWhiskey
+              parameters:
+                id: $response.body#/id
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid input
+        '500':
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Server Error
+  /whiskeys/{id}:
     get:
       summary: Get a specific whiskey
       operationId: getAWhiskey
@@ -61,6 +130,73 @@ paths:
                   message:
                     type: string
                     example: Whiskey not found
+        '500':
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Server Error
+        default:
+          description: Non-specific HTTP response code
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    delete:
+      summary: Delete a specific whiskey
+      operationId: deleteAWhiskey
+      tags:
+        - whiskey
+      parameters:
+        - name: id
+          in: path
+          description: The ID of the whiskey to delete
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: No Content
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid ID supplied
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Whiskey not found
+        '500':
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Server Error
+        default:
+          description: Non-specific HTTP response code
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
 
 components:
   schemas:
@@ -77,10 +213,12 @@ components:
           maxLength: 50
         age:
           type: integer
+          format: int32
           minimum: 3
           maximum: 200
         abv:
           type: number
+          format: percent
           minimum: 0
           maximum: 92
         distillery:
@@ -111,6 +249,16 @@ components:
             - Australia
             - Other
       additionalProperties: false
+    Error:
+        type: object
+        required:
+          - code
+        properties:
+          code:
+            type: integer
+            format: int32
+          message:
+            type: string
   securitySchemes:
     apiKey:
       description: API Key

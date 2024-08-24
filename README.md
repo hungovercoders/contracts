@@ -50,6 +50,7 @@ project
 - [Open API](https://www.openapis.org/)
   - [Open API Generator](https://openapi-generator.tech/)
 - [Redoc](https://github.com/Redocly/redoc)
+- [Open API Fundamentals Course](https://github.com/lftraining/LFELL1011-resources/tree/main)
 - [Open API Docusaurus - Best Tool](https://github.com/PaloAltoNetworks/docusaurus-template-openapi-docs)
   - [Open API Docusaurus - Other Examples](https://docusaurus-openapi.netlify.app/)
   - [Docusaurus Resources](https://docusaurus.io/community/resources)
