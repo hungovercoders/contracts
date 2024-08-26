@@ -74,6 +74,7 @@ project
 - [Prism Mock API](https://docs.stoplight.io/docs/prism/674b27b261c3c-prism-overview)
 - [Specmatic](https://specmatic.io/)
 - [API Blueprint](https://apiblueprint.org/)
+- [Design APIs with Swagger and Open API](https://designapis.com/)
 
 - [Arazzo - Sequence of API Calls](https://github.com/OAI/Arazzo-Specification)
 
@@ -86,7 +87,12 @@ project
   - [Data Contract CLI](https://cli.datacontract.com/)
   - [Data Contract GPT](https://gpt.datacontract.com/)
 - [Open Data Product Specification](https://opendataproducts.org/)
-- [Design APIs with Swagger and Open API](https://designapis.com/)
+- [Data Contracts: Creating APIs for Your Data](https://www.youtube.com/watch?v=qYl21EWNL44&t=43s)
+- [Drivng Data Quality with Data Contracts](https://www.amazon.co.uk/Driving-Data-Quality-Contracts-comprehensive-ebook/dp/B0C37FPH3D)
+- [Bitol](https://bitol.io/)
+
+- [APIs and Data Closer Together](https://www.youtube.com/watch?v=4FzpJ6CDro4)
+
 
 ## Dictionary
 
