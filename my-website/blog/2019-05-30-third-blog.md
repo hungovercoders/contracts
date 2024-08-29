@@ -1,6 +1,6 @@
 ---
-slug: first-blog-post
-title: First Blog
+slug: third-blog-post
+title: third Blog Post
 authors:
   name: Gao Wei
   title: Docusaurus Core Team
