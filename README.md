@@ -44,6 +44,11 @@ project
 │
 ```
 
+## Containerize Docs
+
+- [Containerize Docs](https://shipyard.build/blog/containerize-your-docs/)
+- [Static Web App deploy](https://www.azurestaticwebapps.dev/blog/build-with-docusaurus)
+
 ## Useful Links
 
 - [REST Origin - Roy Fielding](https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
