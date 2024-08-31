@@ -83,6 +83,8 @@ project
 
 - [Arazzo - Sequence of API Calls](https://github.com/OAI/Arazzo-Specification)
 
+- [pact](https://pact.io/)
+
 - [Async API](https://www.asyncapi.com/en)
 
   - [Async API VS Code](https://marketplace.visualstudio.com/items?itemName=asyncapi.asyncapi-preview)
