@@ -97,6 +97,7 @@ project
 - [Data Contracts: Creating APIs for Your Data](https://www.youtube.com/watch?v=qYl21EWNL44&t=43s)
 - [Drivng Data Quality with Data Contracts](https://www.amazon.co.uk/Driving-Data-Quality-Contracts-comprehensive-ebook/dp/B0C37FPH3D)
 - [Bitol](https://bitol.io/)
+- [soda](https://www.soda.io/)
 
 - [APIs and Data Closer Together](https://www.youtube.com/watch?v=4FzpJ6CDro4)
 
