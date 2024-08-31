@@ -98,6 +98,7 @@ project
 - [Drivng Data Quality with Data Contracts](https://www.amazon.co.uk/Driving-Data-Quality-Contracts-comprehensive-ebook/dp/B0C37FPH3D)
 - [Bitol](https://bitol.io/)
 - [soda](https://www.soda.io/)
+- [great expectations](https://greatexpectations.io/)
 
 - [APIs and Data Closer Together](https://www.youtube.com/watch?v=4FzpJ6CDro4)
 
