@@ -101,6 +101,7 @@ project
 - [great expectations](https://greatexpectations.io/)
 - [data contract online editor](https://editor.datacontract.com/)
 - [data contract gpt](https://gpt.datacontract.com/)
+- [data contract json schema](https://datacontract.com/datacontract.schema.json)
 
 - [APIs and Data Closer Together](https://www.youtube.com/watch?v=4FzpJ6CDro4)
 
