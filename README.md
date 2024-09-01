@@ -99,6 +99,8 @@ project
 - [Bitol](https://bitol.io/)
 - [soda](https://www.soda.io/)
 - [great expectations](https://greatexpectations.io/)
+- [data contract online editor](https://editor.datacontract.com/)
+- [data contract gpt](https://gpt.datacontract.com/)
 
 - [APIs and Data Closer Together](https://www.youtube.com/watch?v=4FzpJ6CDro4)
 
