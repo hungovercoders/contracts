@@ -69,9 +69,19 @@ const config: Config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            label: "Petstore API",
+            label: "Petstore",
             position: "left",
             to: "/docs/category/petstore-api",
+          },
+          {
+            label: "Whiskey",
+            position: "left",
+            to: "/docs/category/whiskey",
+          },
+          {
+            label: "Data Products",
+            position: "left",
+            to: "/dataproducts/whiskey.html",
           },
           {
             href: "https://github.com/facebook/docusaurus",
@@ -196,10 +206,20 @@ const config: Config = {
         docsPluginId: "classic",
         config: {
           petstore: {
-            specPath: "examples/petstore.yaml",
+            specPath: "static/contracts/petstore/petstore.yaml",
             outputDir: "docs/petstore",
             downloadUrl:
-              "https://raw.githubusercontent.com/PaloAltoNetworks/docusaurus-template-openapi-docs/main/examples/petstore.yaml",
+              "../../contracts/petstore/petstore.yaml",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+              categoryLinkSource: "tag",
+            },
+          },
+          whiskey: {
+            specPath: "static/contracts/whiskey/whiskey.oas.0.0.yaml",
+            outputDir: "docs/whiskey",
+            downloadUrl:
+              "../../contracts/whiskey/whiskey.oas.0.0.yaml",
             sidebarOptions: {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",

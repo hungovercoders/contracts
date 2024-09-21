@@ -1,0 +1,94 @@
+---
+id: whiskey
+title: "Whiskey"
+description: "A whiskey object"
+sidebar_label: "Whiskey"
+hide_title: true
+schema: true
+custom_edit_url: null
+---
+
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Whiskey"}
+>
+</Heading>
+
+
+
+A whiskey object
+
+<ul>
+  <SchemaItem
+    collapsible={false}
+    name={"id"}
+    required={false}
+    schemaName={"string"}
+    qualifierMessage={undefined}
+    schema={{"type":"string"}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"name"}
+    required={false}
+    schemaName={"string"}
+    qualifierMessage={"**Possible values:** `non-empty` and `<= 50 characters`"}
+    schema={{"type":"string","minLength":1,"maxLength":50}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"age"}
+    required={false}
+    schemaName={"int32"}
+    qualifierMessage={"**Possible values:** `>= 3` and `<= 200`"}
+    schema={{"type":"integer","format":"int32","minimum":3,"maximum":200}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"abv"}
+    required={false}
+    schemaName={"percent"}
+    qualifierMessage={"**Possible values:** `<= 92`"}
+    schema={{"type":"number","format":"percent","minimum":0,"maximum":92}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"distillery"}
+    required={false}
+    schemaName={"string"}
+    qualifierMessage={"**Possible values:** `non-empty` and `<= 50 characters`"}
+    schema={{"type":"string","minLength":1,"maxLength":50}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"type"}
+    required={false}
+    schemaName={"string"}
+    qualifierMessage={"**Possible values:** [`Single Malt`, `Blended`, `Bourbon`, `Rye`, `Corn`, `Wheat`, `Other`]"}
+    schema={{"type":"string","enum":["Single Malt","Blended","Bourbon","Rye","Corn","Wheat","Other"]}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"country"}
+    required={false}
+    schemaName={"string"}
+    qualifierMessage={"**Possible values:** [`Scotland`, `Ireland`, `USA`, `Canada`, `Japan`, `Wales`, `England`, `India`, `Australia`, `Other`]"}
+    schema={{"type":"string","enum":["Scotland","Ireland","USA","Canada","Japan","Wales","England","India","Australia","Other"]}}
+  >
+    
+  </SchemaItem>
+</ul>
+            

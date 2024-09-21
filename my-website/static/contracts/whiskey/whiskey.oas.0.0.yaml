@@ -206,6 +206,8 @@ paths:
 components:
   schemas:
     Whiskey:
+      x-tags:
+        - whiskey
       title: Whiskey
       description: A whiskey object
       type: object
