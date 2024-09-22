@@ -65,6 +65,7 @@ jobs:
 
   production-infrastructure:
     if: github.ref == 'refs/heads/main'
+    needs: application
     uses: ./.github/workflows/infrastructure.yml
     with:
       UNIQUE_NAMESPACE: ${{ vars.UNIQUE_NAMESPACE }}
