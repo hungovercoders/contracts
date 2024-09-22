@@ -30,7 +30,7 @@ if [ "$APP_TYPE" = "api" ]; then
 fi
 if [ "$APP_TYPE" = "web" ]; then
     echo "You have chosen to build a web page."
-    PORT1="8080"
+    PORT1="$PORT_WEB" ##"8080"
     PORT2="$PORT_WEB"
 fi
 
