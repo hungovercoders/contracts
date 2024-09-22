@@ -66,14 +66,12 @@ locals {
   region_shortcode                          = (var.region == "northeurope" ? "eun" : var.region == "westeurope" ? "euw" : "unk")
   environment_shortcode                     = (var.environment == "learning" ? "lrn" : var.environment == "development" ? "dev" : var.environment == "production" ? "prd" : "unk")
 #   custom_domain                             = (local.environment_shortcode == "prd" ? "whiskey.hungovercoders.com" : "${local.environment_shortcode}whiskey.hungovercoders.com")
-  resource_group_name                       = "${local.environment_shortcode}-${var.domain}-rg-${var.unique_namespace}"
-  container_app_web_name                    = "${local.environment_shortcode}-${var.domain}-web-${local.region_shortcode}-${var.unique_namespace}"
+  resource_group_name                       = "${local.environment_shortcode}-${var.app}-rg-${var.unique_namespace}"
+  container_app_web_name                    = "${local.environment_shortcode}-${var.app}-web-${local.region_shortcode}-${var.unique_namespace}"
   container_environment_name                = "${local.environment_shortcode}-platform-ace-${local.region_shortcode}-${var.unique_namespace}"
   container_environment_resource_group_name = "${local.environment_shortcode}-platform-rg-${var.unique_namespace}"
   container_web_name                        = "${var.app}-web"
   container_web_image_name                  = "docker.io/${var.organisation}/${var.app}-web:${var.image_tag}"
-  cosmos_name                               = "${local.environment_shortcode}-${var.domain}-sql-${local.region_shortcode}-${var.unique_namespace}"
-
   tags = {
     environment  = var.environment
     organisation = var.organisation
