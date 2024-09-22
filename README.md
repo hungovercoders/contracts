@@ -2,6 +2,9 @@
 
 All hungover contracts such as openapi, asyncapi or data product specifications
 
+- [Current Site](https://nice-meadow-0f5a93c03.5.azurestaticapps.net/docs/category/whiskey)
+- [Static Web App](https://github.com/fearlessly-dev/swa-demo-docusaurus)
+
 ## Structure
 
 ```text
