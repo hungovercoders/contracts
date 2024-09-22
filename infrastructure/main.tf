@@ -21,10 +21,6 @@ resource "azurerm_container_app" "web" {
       image  = local.container_web_image_name
       cpu    = 0.25
       memory = "0.5Gi"
-      env {
-        name  = "API_URL"
-        value = "https://${azurerm_container_app.api.ingress[0].fqdn}/api"
-      }
     }
   }
   ingress {
@@ -37,7 +33,7 @@ resource "azurerm_container_app" "web" {
   }
   lifecycle {
     ignore_changes = [
-      ingress[0].custom_domain // Ignore changes to the custom domain until terraform can manage it - https://github.com/hashicorp/terraform-provider-azurerm/issues/21866
+      ingress[0].custom_domain // TODO: Ignore changes to the custom domain until terraform can manage it - https://github.com/hashicorp/terraform-provider-azurerm/issues/21866
     ]
   }
 }
