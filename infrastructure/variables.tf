@@ -67,7 +67,7 @@ locals {
   environment_shortcode                     = (var.environment == "learning" ? "lrn" : var.environment == "development" ? "dev" : var.environment == "production" ? "prd" : "unk")
 #   custom_domain                             = (local.environment_shortcode == "prd" ? "whiskey.hungovercoders.com" : "${local.environment_shortcode}whiskey.hungovercoders.com")
   resource_group_name                       = "${local.environment_shortcode}-${var.app}-rg-${var.unique_namespace}"
-  container_app_web_name                    = "${local.environment_shortcode}-${var.app}-web-${local.region_shortcode}-${var.unique_namespace}"
+  container_app_web_name                    = "${local.environment_shortcode}-${var.app}-${local.region_shortcode}-${var.unique_namespace}"
   container_environment_name                = "${local.environment_shortcode}-platform-ace-${local.region_shortcode}-${var.unique_namespace}"
   container_environment_resource_group_name = "${local.environment_shortcode}-platform-rg-${var.unique_namespace}"
   container_web_name                        = "${var.app}-web"
