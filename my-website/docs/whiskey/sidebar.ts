@@ -7,6 +7,10 @@ const sidebar: SidebarsConfig = {
       id: "whiskey/whiskey-api",
     },
     {
+      type: "doc",
+      id: "whiskey/data-product-whiskey",
+    },
+    {
       type: "category",
       label: "whiskey",
       link: {

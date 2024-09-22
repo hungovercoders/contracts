@@ -1,0 +1,222 @@
+---
+id: data-product-whiskey
+title: "Whiskey Data Product"
+description: "## Whiskey Data Product"
+sidebar_label: Whiskey Data Product
+sidebar_position: 1
+hide_title: true
+custom_edit_url: null
+---
+
+# Whiskeys Data Contract
+
+<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+  <div>
+    **Data Contract Specification Version**: 0.9.3  
+    **ID**: `whiskeys`
+  </div>
+  <button
+    onClick={() => {
+      const link = document.createElement('a');
+      link.href = "../../contracts/whiskey/whiskey.dac.0.0.yaml";
+      link.download = "whiskey.dac.0.0.yaml";
+      link.click();
+    }}
+    style={{
+      padding: '8px 16px', // Adjusted height
+      backgroundColor: '#6c757d', // Grey color
+      color: '#fff', // White text
+      border: 'none',
+      borderRadius: '5px',
+      cursor: 'pointer',
+    }}
+  >
+    Export
+  </button>
+</div>
+
+---
+
+## Information
+
+- **Title**: Whiskeys  
+- **Version**: 0.0.1  
+- **Description**: List of whiskies
+- **Links**:  
+  - [Blog](https://hungovercoders.com)
+
+---
+
+## Servers
+
+### Production Server
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Catalog</th>
+      <th>Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Databricks</td>
+      <td>main</td>
+      <td>whiskey</td>
+    </tr>
+  </tbody>
+</table>
+
+> _Note_: This will default to the context running in. See the data contract spec for remote configurations.
+
+---
+
+## Models
+
+### Whiskeys Table
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Primary</th>
+      <th>Unique</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>whiskey_name</td>
+      <td>string</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Name of the whiskey</td>
+      <td>Talisker</td>
+    </tr>
+    <tr>
+      <td>country</td>
+      <td>
+        string
+    <details>
+          Ireland, USA, Scotland, Wales
+        </details>
+      </td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>No</td>
+      <td>Country whiskey originates from</td>
+      <td>Ireland</td>
+    </tr>
+    <tr>
+      <td>last_updated</td>
+      <td>timestamp</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>No</td>
+      <td>When the whiskey was last updated</td>
+      <td>2024-01-01 12:00:00</td>
+    </tr>
+  </tbody>
+</table>
+
+### Distilleries Table
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Primary</th>
+      <th>Unique</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>distillery_name</td>
+      <td>string</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Name of the distillery</td>
+      <td>Penderyn</td>
+    </tr>
+    <tr>
+      <td>last_updated</td>
+      <td>timestamp</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>No</td>
+      <td>When the distillery was last updated</td>
+      <td>2024-01-01 12:00:00</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Examples
+
+### Whiskeys Example
+
+<details>
+  <summary>View Example Data (CSV)</summary>
+  <pre><code>
+whiskey_name,country,last_updated
+Jamesons,Ireland,2024-01-01 12:00:00
+Jack Daniels,USA,2024-01-01 12:00:00
+Glenfiddich,Scotland,2024-01-01 12:00:00
+Bushmills,Ireland,2024-01-01 12:00:00
+Penderyn,Wales,2024-01-01 12:00:00
+  </code></pre>
+</details>
+
+### Distilleries Example
+
+<details>
+  <summary>View Example Data (CSV)</summary>
+  <pre><code>
+distillery_name,last_updated
+Penderyn,2024-01-01 12:00:00
+Glenmorangie,2024-01-01 12:00:00
+  </code></pre>
+</details>
+
+---
+
+## Quality Checks
+
+<details>
+  <summary>SodaCL Specification</summary>
+  <ul>
+    <li><strong>Freshness:</strong> last_updated::timestamp &lt; 1m</li>
+    <li><strong>Row Count:</strong> row_count &gt; 5</li>
+  </ul>
+</details>
+
+---
+
+## Service Levels
+
+### Latency
+
+- **Description**: Data is available within 25 hours after the order was placed.  
+- **Threshold**: 1 minute  
+- **Source Timestamp Field**: `whiskeys.last_updated`  
+- **Processed Timestamp Field**: `whiskeys.last_updated`
+
+### Freshness
+
+- **Description**: The most recent data in the whiskeys list.  
+- **Threshold**: 1 minute  
+- **Timestamp Field**: `whiskeys.last_updated`
+
+---
+

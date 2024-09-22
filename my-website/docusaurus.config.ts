@@ -79,11 +79,6 @@ const config: Config = {
             to: "/docs/category/whiskey",
           },
           {
-            label: "Data Products",
-            position: "left",
-            to: "/dataproducts/whiskey.html",
-          },
-          {
             href: "https://github.com/facebook/docusaurus",
             label: "GitHub",
             position: "right",
