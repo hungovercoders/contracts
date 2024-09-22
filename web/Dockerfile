@@ -20,10 +20,12 @@ RUN yarn install && yarn cache clean
 COPY . .
 
 # Expose the port that Docusaurus will run on
-EXPOSE 3000
+EXPOSE 8080
+
+ENV PORT=8080
 
 # Add a HEALTHCHECK instruction
-HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 CMD curl -f http://localhost:3000 || exit 1
+HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 CMD curl -f http://localhost:8080 || exit 1
 
 # Command to run the Docusaurus development server
 CMD ["yarn", "start"]
