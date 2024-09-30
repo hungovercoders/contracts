@@ -108,6 +108,8 @@ project
 
 - [APIs and Data Closer Together](https://www.youtube.com/watch?v=4FzpJ6CDro4)
 
+- [Adidas API guidelines](https://github.com/adidas/api-guidelines)
+
 
 ## Dictionary
 
