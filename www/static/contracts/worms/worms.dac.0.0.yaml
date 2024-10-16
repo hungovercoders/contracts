@@ -1,0 +1,51 @@
+dataContractSpecification: 0.9.3
+id: worms
+info:
+  title: Worms
+  version: 0.0.1
+  description: List of Worm Teams
+  links:
+    blog: hungovercoders.com
+servers:
+  production:
+    type: databricks # this will default to context running in - see servers in data contract spec if want to be more remote 
+    catalog: main
+    schema: worms
+models:
+  worm_team:
+    description: Worm teams and their members
+    type: table
+    fields:
+      team_name:
+        type: string
+        enum: 
+          - Aliens
+          - South Park
+          - Ghostbusters
+          - The A Team
+        required: true
+        primary: true
+        unique: true
+        description: Name of the worms team
+        example: "Aliens"
+        pii: false
+        domain: Worms
+      team_members:
+        type: array
+        items:
+          type: object
+          fields:
+            name:
+              type: string
+              required: true
+              description: Name of the worm
+              example: "Hudson"
+              pii: false
+              domain: Worms
+            age:
+              type: integer
+              required: true
+              description: Age of the worm
+              example: "10"
+              pii: false
+              domain: Worms

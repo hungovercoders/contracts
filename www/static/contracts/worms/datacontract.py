@@ -1,0 +1,19 @@
+worm_team = StructType([
+    StructField("team_name",
+        StringType(),
+        False
+    ),
+    StructField("team_members",
+        ArrayType(StructType([
+            StructField("name",
+                StringType(),
+                False
+            ),
+            StructField("age",
+                IntegerType(),
+                False
+            )
+        ])),
+        True
+    )
+])

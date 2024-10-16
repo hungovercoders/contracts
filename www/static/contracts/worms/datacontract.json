@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "team_name": {
+      "type": "string",
+      "unique": true,
+      "enum": [
+        "Aliens",
+        "South Park",
+        "Ghostbusters",
+        "The A Team"
+      ],
+      "description": "Name of the worms team"
+    },
+    "team_members": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the worm"
+          },
+          "age": {
+            "type": "integer",
+            "description": "Age of the worm"
+          }
+        },
+        "required": [
+          "name",
+          "age"
+        ]
+      }
+    }
+  },
+  "required": [
+    "team_name"
+  ],
+  "description": "Worm teams and their members"
+}
