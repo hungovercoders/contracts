@@ -6,3 +6,5 @@ vscode:
     - dracula-theme.theme-dracula
     - 42Crunch.vscode-openapi
     - asyncapi.asyncapi-preview
+    - xyc.vscode-mdx-preview
+    - unifiedjs.vscode-mdx
