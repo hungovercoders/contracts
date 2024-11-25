@@ -2,6 +2,12 @@ openapi: 3.0.3
 info:
   title: PetSitter API
   version: "0.1"
+  description: |
+    This is the PetSitter API, which allows users to register, login, and create jobs.
+    Users can be either Pet Owners or Pet Sitters, and jobs can be created by Pet Owners
+    to find Pet Sitters for their pets.
+    The API is secured using a session token, which is obtained by logging in.
+    The API is versioned at 0.1.
 tags:
   - name: Users
     description: User-related operations
